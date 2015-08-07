@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE struts PUBLIC      
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"     
+	"http://struts.apache.org/dtds/struts-2.0.dtd"> 
+<struts>
+
+	<package name="dispatch" namespace="/" extends="struts-default">
+		<action name="pageDispatcher" class="cn.tju.edu.js.DispatcherController" method="PageDispatcher">
+			<result name="1">/res/page/Main.htm</result>
+			<result name="1.1">/res/page/IntermediatePage/1-1.html</result>
+			<result name="1.1.1">/res/page/IntermediatePage/1-1-1.html</result>
+			<result name="1.1.3">/res/page/IntermediatePage/1-1-3.html</result>
+			<result name="error">/Error.html</result>
+		</action>
+		
+		<action name="word2HtmlDispatcher" class="cn.tju.edu.js.DispatcherController" method="Word2HtmlDispatcher">
+			<result name="yhsyfwzchzg">/res/fileHtml/1.htm</result>
+		</action>
+		
+		<action name="documentDispatcher" class="cn.tju.edu.js.DispatcherController" method="Word2HtmlDispatcher">
+			<result name="yhsyfwzchzg">/res/document/1.doc</result>
+		</action>
+	</package>
+	
+</struts>
